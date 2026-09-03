@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-image: url(Background-menu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 240vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content {
+    min-height: 80px;
+    min-width: 1520px;
+    background-color: #F45A38;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    color: #DEDEDE;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #FFFFFF;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(-9px 9px 9px rgba(0, 0, 0, 0.5));
+}
+
+.title-menu {
+    display: flex;
+    font-family: cursive, "Brush Script MT", sans-serif;
+    font-size: 70px;
+    color: #F45A38;
+    text-align: center;
+    translate: 1200px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid red;
+    width: 230px;
+    /* Grosor, estilo y color de la línea */
+    padding-bottom: 4px;
+}
+
+
+.desc-item {
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    translate: 0px 10px;
+}
+
+.listFood {
+    display: flex;
+    font-size: 35px;
+    translate: 220px 20px;
+    padding: 30px;
+}
+
+.title {
+    text-decoration: none;
+    border-bottom: 2px solid red;
+    width: 330px;
+    /* Grosor, estilo y color de la línea */
+    padding-bottom: 4px;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.itemList {
+    max-width: 1200px;
+    margin: auto;
+    width: 700px;
+    height: 100px;
+    translate: 60px -90px;
+    color: #FFFFFF;
+}
+
+.price {
+    font-size: 20px;
+    translate: 0px 50px;
+    color: #F45A38;
+    font-weight: bold;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.menu-ico {
+    display: inline-block;
+    translate: 85px -1618px;
+    width: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(-9px 9px 9px rgba(0, 0, 0, 0.5));
+    z-index: 7;
+}
+
+@media(max-width:991px) {
+
+    .content {
+        min-height: 70px;
+    }
+
+    .menu {
+        top: 0;
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color: #F45A38;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+
+}

@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title{
+    color: orange;
+}
+
+body {
+  background-color: rgb(115, 111, 105);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  margin: 0;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+/* Contenedor */
+.contenedor{
+
+    padding-bottom: 40px;    
+}
+/* Header -Menu */
+.header{
+    padding-top: 10px;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo */
+.logo{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    translate: 0px 20px;
+}
+.logo span{
+    color: orange;
+}
+.hamburguesa{
+    width: 30px;
+}
+.icono{
+    width: 80px;
+}
+@media (min-width:768px) {
+    .hamburguesa{
+        display: none;
+    }
+    .icono{
+        display: none;
+    }
+}
+.hamburguesa:hover{
+    cursor: pointer;
+}
+/* Navegacion */
+.menu{
+    display: none;
+}
+@media (min-width:768px) {
+    .presentacion--imagen{
+        padding-top: 5%;
+        max-width: 450px;
+    }
+    .menu{
+        display: flex;
+    }
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+@media (min-width:768px) {
+    .navegacion{
+        gap: 30px;
+    }
+}
+@media (min-width:992px) {
+    .presentacion--imagen{
+        padding-top: 5%;
+        max-width: 450px;
+    }
+    .navegacion{
+        gap: 50px;
+    }
+    
+}
+.navegacion a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid orange;
+}
+.navegacion a:hover{
+    color: black;
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.navegacion a{
+   font-weight: 700; 
+}
+
+.navegacion li a:hover{
+    background-color: white;
+    color: orange;
+}
+/* Información Banner */
+.presentacion{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width:768px) {
+    .presentacion{
+        flex-direction: row;
+    }
+}
+/* Información */
+.informacion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+@media (min-width:768px) {
+    .informacion{
+        text-align: start;
+        align-items: flex-start;
+        width: 50%;
+    }
+    
+}
+.informacion--boton button{
+    width: 40%;
+    padding: 10px;
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 0 20px rgba(122, 73, 5, 0.4);
+    cursor: pointer;
+}
+.informacion--boton button:hover{
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+}
+/* Información imagen */
+.presentacion--imagen{
+    max-width: 500px;
+    filter: drop-shadow(0 1mm 3mm rgba(255,166,0,0.468));
+}
+@media (min-width:456px) {
+    .texto-informacion{
+        width: 100%;
+    }
+    .presentacion--imagen{
+        max-width: 400px;
+        padding-top: 8%;
+    }
+}
+@media (min-width:1024px) {
+    .presentacion--imagen{
+        padding-top: 5%;
+        max-width: 470px;
+    }
+    .informacion{
+        width: 50%;
+    }
+}
+/* Seccion platos */
+.comida{
+    padding-top: 4%;
+    width: 90%;
+    margin-inline:auto;
+}
+.platos{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 85px;
+}
+@media (min-width:768px) {
+    .platos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width:992px) {
+    .platos{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.comida--titulo{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 85px;
+    color: white;
+}
+@media (min-width:768px) {
+    .comida--titulo{
+        text-align: start;
+    }
+}
+/* Contenedor de tarjetas */
+.plato{
+    width: 80%;
+    margin-inline:auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 0.426);
+}
+.plato img{
+    width: 150px;
+    filter: drop-shadow(0 0 0.9rem orange);
+    margin-top: -85px;
+}
+.plato p{
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+}
+.plato--info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+.plato--info p{
+    font-weight: 900;
+}
+.plato--info button{
+    background-color: orange;
+    color: white;
+    font-weight: 900;
+    padding: 5px 12px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.plato--info button:hover{
+    cursor: pointer;
+}
+
+.body-form{
+    min-height: 70hv;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 20px 25px 45px 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.line {
+    display: inline-block;
+    width: 160px;
+    height: 7px;
+    background: linear-gradient(90deg, rgb(211, 107, 10) 0%, rgb(220, 118, 9)77%);
+}
+
+label {
+    color: #1B1B1B;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input{
+    padding: 17px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #EDEDED;
+    color: #1B1B1B;
+    outline: none;
+}
+
+textarea{
+    padding: 17px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #EDEDED;
+    color: #1B1B1B;
+    outline: none;
+}
+
+input::placeholder {
+    color: #C0C0C0;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a{
+    color: #1B1B1B;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media(max-width:991px) {
+
+    .body-form{
+        padding: 30px;
+    }
+
+    form{
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input{
+        padding: 15px 10px;
+    }
+
+    .informacion--boton button{
+        width: 20%;
+    }
+
+}
